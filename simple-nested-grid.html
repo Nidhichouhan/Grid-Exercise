@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Exercise</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr);
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .grid-container>div {
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color: azure;
+        }
+
+        #div1 {
+            justify-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=grid-container>
+        <div id=div1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eos. 1</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eos. 2</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eos. 3</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eos. 4</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eos. 5</div>
+    </div>
+</body>
+
+</html>
